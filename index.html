@@ -4,122 +4,227 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nakshathira S - Web Developer</title>
-  <!-- Link to your external stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-k6RqeAGLF0F9lT4GqnDp6jWJaD9E0DtHJcrTjWgXnWqjynChxRRm8YdbUpc1VBqB" crossorigin="anonymous">
+
+  <style>
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+.certificate-link {
+    font-size: 25px;
+}
+
+/* Fixed Navigation Bar */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px; /* Width of the sidebar */
+    height: 100vh; /* Full viewport height */
+    background-color: #7A1CAC;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.nav-bar a:hover {
+    background-color: #AD49E1;
+}
+
+/* Content Sections */
+.content {
+    margin-left: 160px; /* Offset to account for the sidebar width */
+    padding: 20px;
+    background-color: #EBD3F8;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh; /* Full viewport height for each section */
+}
+
+/* Centering section titles */
+section h1, section h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Profile Picture Hover Animation */
+.profile-pic {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensures the image fits well inside the circle */
+    transition: transform 0.3s ease; /* Smooth transition for scale */
+    margin: 0 auto; /* Center the profile picture */
+    display: block; /* Ensure block display for centering */
+}
+
+.profile-pic:hover {
+    transform: scale(1.2); /* Enlarge the image on hover */
+}
+
+/* Home Section Layout */
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between text and profile picture */
+}
+
+.text1 {
+    flex: 1; /* Allow text to take available space */
+    font-size: 24px; /* Adjust font size as needed */
+    margin-right: 20px; /* Space between text and profile picture */
+}
+
+.profile-container {
+    flex-shrink: 0; /* Prevent profile picture from shrinking */
+}
+
+/* Skill Badges - Grid Layout */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 badges per line */
+    gap: 20px; /* Space between badges */
+    justify-items: center; /* Center badges in each grid cell */
+    margin-top: 50px;
+}
+
+.badge {
+    background-color: #381140;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 50%; /* Make the badge circular */
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.badge:hover {
+    background-color: #b534dc; /* Change color on hover */
+    transform: scale(1.2); /* Grow the badge on hover */
+}
+
+#education p ,#contact p ,#about p{
+    font-size: 30px;
+}
+footer{
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 badges per line on small screens */
+    }
+}
+
+
+  </style>
 </head>
 <body>
 
- <!-- Header Section -->
- <header>
-    <h1>I'm Nakshathira S</h1>
-    <p>Student</p>
-  </header>
+<!-- Fixed Navigation Bar -->
+<div class="nav-bar">
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</div>
 
-  <!-- Navigation Section -->
-  <nav>
-    <ul>
-      <li><a href="#introduction" class="nav-link">Introduction</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
-      <li><a href="#certificates" class="nav-link">Certificates</a></li>
-      <li><a href="#about" class="nav-link">About Me</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-      <li><a href="#resume" class="nav-link">Resume</a></li>
-      <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-      <li><a href="#blog" class="nav-link">Blog</a></li>
-    </ul>
-  </nav>
+<!-- Scrollable Sections -->
+<div class="content">
+        <section id="home">
+            <h1>Home</h1>
+            <div class="home-content">
+                <p class="text1">Welcome to my portfolio! I am a student passionate about creating innovative and user-friendly websites.</p>
+                <div class="profile-container">
+                    <img src="photo2.PNG" alt="Nakshathira's Profile Picture" class="profile-pic">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Other sections... -->
 
-  <!-- Introduction Section -->
-  <section id="introduction">
-    <h2 class="section-title">Introduction</h2>
-    <p>Welcome to my portfolio! I am a student passionate about creating innovative and user-friendly websites.</p>
-  </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <br>
-    <h3><span class="badge">CSS</span></h3><br>
-    <h3><span class="badge">CSS 3</span></h3><br>
-    <h3><span class="badge">HTML</span></h3><br>
-    <h3><span class="badge">HTML5</span></h3><br>
-    <h3><span class="badge">Java Script</span></h3><br>
-    <h3><span class="badge">Python</span></h3><br>
-  </section>
+            <div class="badge">HTML</div>
+            <div class="badge">CSS</div>
+            <div class="badge">JavaScript</div>
+            <div class="badge">Python</div>
+            <div class="badge">C</div>
+            <div class="badge">Java</div>
+            <div class="badge">React.js</div>
+            <div class="badge">Node.js</div>
+        </div>
+    </section>
+    
 
-  <!-- Education Section -->
-  <section id="education">
-    <h2 class="section-title">Education</h2>
-    <p>Bachelor of  Engineering in Computer Science And Engineering - KGiSL Institute Of Technology(Expected Year of Graduation: May 2027 )</p>
-  </section>
-
-  <!-- Certificates Section -->
-  <section id="certificates">
-    <h2 class="section-title">Certificates</h2>
+    <section id="education">
+        <h1>Education</h1>
+        <p>Bachelor of Engineering in Computer Science And Engineering - KGiSL Institute Of Technology (Expected Year of Graduation: May 2027)</p>
+        <h2 class="section-title">Certificates</h2>
     <!-- Include your certificate links -->
-    <ul id="certificate-list">
-      <li><a class="certificate-link" href="https://drive.google.com/file/d/1QdrZPTYFn9iGkvUHGeTg1P8049riIDJJ/view?usp=drive_link" target="_blank">Front-end Development Libraries</a></li>
-      <li><a class="certificate-link" href="https://drive.google.com/file/d/1Qc1AePMTFqBm3EwFygfHAnRsr3bsWELu/view?usp=drive_link" target="_blank">Great Learning - Python Fundamentals For Beginners</a></li>
-      <li><a class="certificate-link" href="https://drive.google.com/file/d/1QnwMdv6ZG4_RZ62vOG1dTnNuAjvfFHB_/view?usp=drive_link" target="_blank">JavaScript Algorithms And Data Structures</a></li>
-      <li><a class="certificate-link" href="https://drive.google.com/file/d/1QbZg8pTy6kDL-XQIYuk3vJSdlDWaDyjt/view?usp=drive_link" target="_blank">Programming Essentials In Python</a></li>
-      <li><a class="certificate-link" href="https://drive.google.com/file/d/1Qor8HdxL9T1Zv6Epk63YEfCqgjf5TVZ-/view?usp=drive_link" target="_blank">Responsive Web Design</a></li>
-      <li><a class="certificate-link" href="https://drive.google.com/file/d/1Qd5qaJDPbhHYXsPKDncPvPh8wsFrizcS/view?usp=drive_link" target="_blank">Scientific Computing With Python</a></li>
-    </ul>
-    <p id="certificate-title" class="hidden">Certificates</p>
-  </section>
+      <a class="certificate-link" href="https://drive.google.com/file/d/1QdrZPTYFn9iGkvUHGeTg1P8049riIDJJ/view?usp=drive_link" target="_blank">Front-end Development Libraries</a><br>
+      <a class="certificate-link" href="https://drive.google.com/file/d/1Qc1AePMTFqBm3EwFygfHAnRsr3bsWELu/view?usp=drive_link" target="_blank">Great Learning - Python Fundamentals For Beginners</a><br>
+      <a class="certificate-link" href="https://drive.google.com/file/d/1QnwMdv6ZG4_RZ62vOG1dTnNuAjvfFHB_/view?usp=drive_link" target="_blank">JavaScript Algorithms And Data Structures</a><br>
+      <a class="certificate-link" href="https://drive.google.com/file/d/1QbZg8pTy6kDL-XQIYuk3vJSdlDWaDyjt/view?usp=drive_link" target="_blank">Programming Essentials In Python</a><br>
+      <a class="certificate-link" href="https://drive.google.com/file/d/1Qor8HdxL9T1Zv6Epk63YEfCqgjf5TVZ-/view?usp=drive_link" target="_blank">Responsive Web Design</a><br>
+      <a class="certificate-link" href="https://drive.google.com/file/d/1Qd5qaJDPbhHYXsPKDncPvPh8wsFrizcS/view?usp=drive_link" target="_blank">Scientific Computing With Python</a><br>
+    
+    
+    </section>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p>I'm a passionate student and aspiring web developer, excited to explore the world of coding and create meaningful web experiences. My journey in web development began with the fascination of turning lines of code into captivating websites.
+    <section id="projects">
+        <h1>Projects</h1>
+        <p>A showcase of my projects and work.</p>
+    </section>
 
-    Currently on a mission to learn and apply the fundamentals of HTML, CSS, and JavaScript, I'm committed to mastering the craft. The thrill of problem-solving and the endless possibilities of web development have captured my imagination.
+    <section id="about">
+        <h1>About</h1>
+        <p>I'm a passionate student and aspiring web developer, excited to explore the world of coding and create meaningful web experiences. My journey in web development began with the fascination of turning lines of code into captivating websites.
+            Currently on a mission to learn and apply the fundamentals of HTML, CSS, and JavaScript, I'm committed to mastering the craft. The thrill of problem-solving and the endless possibilities of web development have captured my imagination.
+            In the fast-paced world of technology, I understand the importance of staying up-to-date with the latest trends and tools. Every project I undertake is not just a coding exercise but an opportunity to explore and grow as a developer.
+            I believe in the power of user-friendly design and its impact on creating positive online experiences. As a fresher, I am enthusiastic about learning, collaborating with peers, and contributing fresh perspectives to the field of web development.
+            I'm always open to new opportunities and challenges that come my way!
+        </p>
+    </section>
 
-    In the fast-paced world of technology, I understand the importance of staying up-to-date with the latest trends and tools. Every project I undertake is not just a coding exercise but an opportunity to explore and grow as a developer.
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>Feel free to reach out to me via email or through my social media profiles.</p>
+        <p>Email: <a href="mailto:snakshathira148@gmail.com" class="contact-link">snakshathira148@gmail.com</a></p>
+        <p>LinkedIn : <a href="https://www.linkedin.com/in/nakshathira-s-csb" target="_blank" class="contact-link">LinkedIn Profile</a></p>
+    </section>
 
-    I believe in the power of user-friendly design and its impact on creating positive online experiences. As a fresher, I am enthusiastic about learning, collaborating with peers, and contributing fresh perspectives to the field of web development.
-
-    I'm always open to new opportunities and challenges that come my way!
-    </p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Feel free to reach out to me via email or through my social media profiles.</p>
-    <p>Email: <a href="mailto:snakshathira148@gmail.com" class="contact-link">snakshathira148@gmail.com</a></p>
-    <p>LinkedIn : <a href="https://www.linkedin.com/in/nakshathira-s-csb" target="_blank" class="contact-link">LinkedIn Profile</a></p>
-  </section>
-
-  <!-- Resume/Download Section -->
-  <section id="resume">
-    <h2 class="section-title">Resume</h2>
-    <p>Download my resume in PDF format: <a href="https://drive.google.com/file/d/1yFDYPYipAX28KHir0oj6V7Jl-TEes1dF/view?usp=drive_link" target="_blank" class="resume-link">Download Resume</a></p>
-  </section>
-
-  <!-- Testimonials/Recommendations Section -->
-  <section id="testimonials">
-    <h2 class="section-title">Testimonials</h2>
-    <!-- Include testimonials or recommendations -->
-    <p>"Nakshathira is a dedicated and passionate student exploring the exciting world of web development. Although not yet engaged in formal projects, their enthusiasm for learning and commitment to mastering the fundamentals of HTML, CSS, and JavaScript is truly commendable. I'm confident that Nakshathira's curiosity and determination will lead to great achievements in the field. Eager to see their continued growth and success!"</p>
-  </section>
-
-  <!-- Blog/Articles Section -->
-  <section id="blog">
-    <h2 class="section-title">Blog</h2>
-    <!-- Include links to your blog articles -->
-    <a href="https://docs.google.com/document/d/1aoxV18Pd_thecfms_XnKHHYLNzAOa9nWaKEgpYdl-Kk/edit?usp=sharing" target="_blank" class="blog-link">Article 1: Mastering Coding</a>
-  </section>
-
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 Nakshathira S</p>
-  </footer>
-
-  <!-- JavaScript for Smooth Scrolling and Toggleable Lines -->
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Nakshathira S</p>
+      </footer>
+    
+</div>
 
 </body>
 </html>
